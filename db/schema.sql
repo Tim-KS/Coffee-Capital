@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS coffecapital_db;
-CREATE DATABASE coffecapital_db;
+DROP DATABASE IF EXISTS coffeecapital_db;
+CREATE DATABASE coffeecapital_db;
