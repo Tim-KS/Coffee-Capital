@@ -11,13 +11,13 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     price: {
         type: DataTypes.DECIMAL(10,2),
