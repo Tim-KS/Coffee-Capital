@@ -19,6 +19,4 @@ Product.belongsTo(Category, {
 //   onDelete: 'CASCADE'
 // });
 
-
-
 module.exports = { User, Category, Product, OrderItem };

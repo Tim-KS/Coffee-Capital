@@ -9,31 +9,31 @@ OrderItem.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
-    order_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'order',
-        key: 'id',
-      },
-    },
+    // order_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'order',
+    //     key: 'id'
+    //   }
+    // },
     product_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'product',
-        key: 'id',
-      },
-    },
+        key: 'id'
+      }
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'order_item',
+    modelName: 'order_item'
   }
 );
 
