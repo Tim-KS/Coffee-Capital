@@ -156,6 +156,16 @@ const productData = [
     price: 0.00,
     category_id: 5,
   },
+  {
+    product_name: 'Regular',
+    price: 0.00,
+    category_id: 6,
+  },
+  {
+    product_name: 'Large',
+    price: 1.00,
+    category_id: 6,
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);

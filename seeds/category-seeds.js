@@ -16,6 +16,9 @@ const categoryData = [
   {
     category_name: 'drink-temp',
   },
+  {
+    category_name: 'drink-size',
+  },
 ];
 
 const seedCategories = () => Category.bulkCreate(categoryData);
