@@ -86,6 +86,76 @@ const productData = [
     price: 5.50,
     category_id: 2,
   },
+  {
+    product_name: 'Standard Milk',
+    price: 0.00,
+    category_id: 3,
+  },
+  {
+    product_name: 'Semi-Skimmed Milk',
+    price: 0.00,
+    category_id: 3,
+  },
+  {
+    product_name: 'Oat Milk',
+    price: 0.50,
+    category_id: 3,
+  },
+  {
+    product_name: 'Almond Milk',
+    price: 0.50,
+    category_id: 3,
+  },
+  {
+    product_name: 'Soy Milk',
+    price: 0.50,
+    category_id: 3,
+  },
+  {
+    product_name: 'No Sugar',
+    price: 0.00,
+    category_id: 4,
+  },
+  {
+    product_name: '1 Sugar',
+    price: 0.00,
+    category_id: 4,
+  },
+  {
+    product_name: '2 Sugar',
+    price: 0.00,
+    category_id: 4,
+  },
+  {
+    product_name: '1 Sweetner',
+    price: 0.00,
+    category_id: 4,
+  },
+  {
+    product_name: '2 Sweetner',
+    price: 0.00,
+    category_id: 4,
+  },
+  {
+    product_name: 'Honey',
+    price: 0.50,
+    category_id: 4,
+  },
+  {
+    product_name: 'Normal Temperature',
+    price: 0.00,
+    category_id: 5,
+  },
+  {
+    product_name: 'Extra Hot',
+    price: 0.00,
+    category_id: 5,
+  },
+  {
+    product_name: 'Warm',
+    price: 0.00,
+    category_id: 5,
+  },
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
