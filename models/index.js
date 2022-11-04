@@ -1,6 +1,7 @@
 const User = require('./User');
 const Category = require('./Category');
 const Product = require('./Product');
+const OrderDetail = require('./OrderDetail');
 const OrderItem = require('./OrderItem');
 
 // 1-m *************************
@@ -19,4 +20,4 @@ Product.belongsTo(Category, {
 //   onDelete: 'CASCADE'
 // });
 
-module.exports = { User, Category, Product, OrderItem };
+module.exports = { User, Category, Product, OrderDetail, OrderItem };

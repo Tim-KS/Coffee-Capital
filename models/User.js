@@ -14,7 +14,7 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     // email is the username
     email: {
@@ -22,23 +22,24 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
-      },
+        isEmail: true
+      }
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // for testing
+      allowNull: true,
       validate: {
-        len: [8],
-      },
+        len: [8]
+      }
     },
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     last_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     is_admin: {
       type: DataTypes.BOOLEAN,
@@ -55,13 +56,13 @@ User.init(
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
-      },
+      }
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'user'
   }
 );
 
