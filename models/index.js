@@ -4,6 +4,7 @@ const Product = require('./Product');
 const OrderDetail = require('./OrderDetail');
 const OrderItem = require('./OrderItem');
 const Session = require('./Session');
+const CartItem = require('./CartItem');
 
 // 1-m *************************
 Category.hasMany(Product, {
@@ -21,4 +22,4 @@ Product.belongsTo(Category, {
 //   onDelete: 'CASCADE'
 // });
 
-module.exports = { User, Category, Product, OrderDetail, OrderItem, Session };
+module.exports = { User, Category, Product, OrderDetail, OrderItem, Session, CartItem };
