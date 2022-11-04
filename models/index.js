@@ -7,6 +7,26 @@ const Session = require('./Session');
 const CartItem = require('./CartItem');
 
 // 1-m *************************
+User.hasMany(OrderDetail, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+OrderDetail.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+// 1-m *************************
+User.hasMany(Session, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Session.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+// 1-m *************************
 Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE'
