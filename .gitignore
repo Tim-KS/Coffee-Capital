@@ -6,6 +6,7 @@
 node_modules
 .env
 commitmsg.txt
+db/check.sql
 
 # User-specific files
 *.rsuser
