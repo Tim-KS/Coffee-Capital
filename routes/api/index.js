@@ -1,11 +1,8 @@
-// routes to be changed...
 const router = require('express').Router();
-// const travellerRoutes = require('./travellerRoutes');
-// const locationRoutes = require('./locationRoutes');
-// const tripRoutes = require('./tripRoutes');
+const userRoutes = require('./userRoutes');
+const orderRoutes = require('./orderRoutes');
 
-// router.use('/travellers', travellerRoutes);
-// router.use('/locations', locationRoutes);
-// router.use('/trips', tripRoutes);
+router.use('/user', userRoutes);
+router.use('/order', orderRoutes);
 
 module.exports = router;
