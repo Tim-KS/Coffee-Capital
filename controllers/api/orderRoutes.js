@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const sequelize = require('../config/connection');
+const { User, Order } = require('../../models');
+const withAuth = require('../utils/auth');
+
+// POST request for the oder
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Order.create({
+    const newOrder = await Order.create({
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -23,7 +27,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
 
-    if (!projectData) {
+    if (!orderData) {
       res.status(404).json({ message: 'No order found with this id!' });
       return;
     }

@@ -1,5 +1,29 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const sequelize = require('../config/connection');
+const { User, Order} = require('../../models');
+const withAuth = require('../utils/auth');
+
+// Login
+
+router.get('/login', (req, res) => {
+  // This is the withAuth fo the user
+  console.log(req.session);
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+// If the user is already logged in, redirect the request to another route
+// SIGNUP
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
 
 router.post('/', async (req, res) => {
   try {
@@ -39,7 +63,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
