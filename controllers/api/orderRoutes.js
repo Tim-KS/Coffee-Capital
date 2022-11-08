@@ -1,16 +1,22 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Order } = require('../../models');
+const { User, Order, OrderItem } = require('../../models');
 const withAuth = require('../utils/auth');
 
-// POST request for the oder
+// CREATE POST request for the order
 
-router.post('/', async (req, res) => {
+router.post('/create', withAuth, async (req, res) => {
   try {
     const newOrder = await Order.create({
       ...req.body,
       user_id: req.session.user_id,
     });
+
+    // attributes: [user_id]
+    // {
+    //   model: OrderItem
+
+    // }
 
     res.status(200).json(newOrder);
   } catch (err) {
@@ -18,65 +24,29 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+// GET order by id
+
+router.get('/:id', async (req, res) => {
   try {
     const orderData = await Order.destroy({
-      where: {const router = require('express').Router();
-      const sequelize = require('../config/connection');
-      const { User, Order } = require('../../models');
-      const withAuth = require('../utils/auth');
-      
-      // POST request for the oder
-      
-      router.post('/', async (req, res) => {
-        try {
-          const newOrder = await Order.create({
-            ...req.body,
-            user_id: req.session.user_id,
-          });
-      
-          res.status(200).json(newOrder);
-        } catch (err) {
-          res.status(400).json(err);
-        }
-      });
-      
-      router.delete('/:id', async (req, res) => {
-        try {
-          const orderData = await Order.destroy({
-            where: {
-              id: req.params.id,
-              user_id: req.session.user_id,
-            },
-          });
-      
-          if (!orderData) {
-            res.status(404).json({ message: 'No order found with this id!' });
-            return;
-          }
-      
-          res.status(200).json(orderData);
-        } catch (err) {
-          res.status(500).json(err);
-        }
-      });
-      
-      module.exports = router;
-      
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+      where: {
+        const router = require('express').Router();
+        const sequelize = require('../config/connection');
+        const { User, Order } = require('../../models');
+        const withAuth = require('../utils/auth');
 
-    if (!orderData) {
-      res.status(404).json({ message: 'No order found with this id!' });
-      return;
-    }
+
+        if(!orderData) {
+          res.status(404).json({ message: 'No order found with this id!' });
+          return;
+        }
 
     res.status(200).json(orderData);
-  } catch (err) {
-    res.status(500).json(err);
+      } catch(err) {
+        res.status(500).json(err);
+      }
+    });
   }
-});
+)}
 
-module.exports = router;
+    module.exports = router;
