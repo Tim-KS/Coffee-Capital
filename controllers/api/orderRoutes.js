@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { User, Order, OrderItem } = require('../../models');
+const { User, Order} = require('../../models');
 const withAuth = require('../utils/auth');
 
 // CREATE POST request for the order
@@ -47,6 +47,6 @@ router.get('/:id', async (req, res) => {
       }
     });
   }
-)}
+});
 
-    module.exports = router;
+module.exports = router;
