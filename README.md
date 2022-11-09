@@ -23,9 +23,9 @@ TO HELP run my business -->
 ```md
 
 ## Links to Deployed Application
-[Link to deployed working application]
+[Link to deployed working application]....
 
-[Link to Github] 
+[Link to Github]....
 
 ## Accetance Criteria
 ```md
