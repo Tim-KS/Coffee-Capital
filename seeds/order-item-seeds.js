@@ -51,11 +51,11 @@ const orderItemData = [
   },
   {
     order_detail_id: 5,
-    product_id: 33
+    product_id: 15
   },
   {
     order_detail_id: 6,
-    product_id: 15
+    product_id: 7
   }
 ];
 
