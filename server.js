@@ -5,6 +5,14 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+const EmailService = require('./utils/emailService');
+const emailService = new EmailService();
+emailService.envCheck();
+emailService.email.to = process.env.EMAIL_ACCOUNT;
+emailService.email.subject = "Coffee Capital Email Service Started"
+emailService.email.html = "Coffee Capital Email Service Started";
+emailService.sendEmail(emailService.email.to, emailService.email);
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -13,7 +21,7 @@ const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
-console.log('11111111111111111111111')
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {
@@ -28,7 +36,7 @@ const sess = {
     db: sequelize
   })
 };
-console.log('222222222222222222222')
+
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
@@ -38,13 +46,11 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-console.log('333333333333333333333')
+
 app.use(routes);
 
 
-// Fallback route for when a user attempts to visit routes that don't exist
-// ALWAYS PUT THIS WILDCARD SAFETY NET AT THE END OR NOTHING ELSE WILL EXECUTE!
-// source: 1105-Ins_Query-Params
+// Fallback route 
 app.get('*', (req, res) =>
   res.send(
     `INVALID ROUTE @: http://localhost:${PORT}`
@@ -53,5 +59,24 @@ app.get('*', (req, res) =>
 
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
+  app.listen(PORT, () => console.log(`Coffee Capital ☕ listening at http://localhost:${PORT}...`));
 });
+
+// Xserver copy.js
+// const express = require('express');
+// const routes = require('./routes');
+// const sequelize = require('./config/connection');
+
+// const app = express();
+// const PORT = process.env.PORT || 3001;
+
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
+// // turn on routes
+// app.use(routes);
+
+// // turn on connection to db and server
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log(`Now listening on PORT: ${PORT}...`));
+// });

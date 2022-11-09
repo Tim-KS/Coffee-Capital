@@ -23,7 +23,7 @@ Product.init(
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: { isDecimal: true }
-    },
+    }
     // date_created: {
     //   type: DataTypes.DATE,
     //   allowNull: false,
@@ -33,13 +33,6 @@ Product.init(
     //   type: DataTypes.FLOAT,
     //   allowNull: false,
     // },
-    category_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id'
-      }
-    }
   },
   {
     sequelize,
