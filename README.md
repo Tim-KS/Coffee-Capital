@@ -1,5 +1,7 @@
 # The Project - Coffee Capital
 
+Add image for Coffee Capital
+
 ## Motivation of application development 
 
 Coffee Capital online order application allows the user to place an order ahead at their local coffee shop, so that it is ready for them to collect when they reach. 
