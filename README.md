@@ -1,6 +1,7 @@
 # The Project - Coffee Capital
+![CoffeeCapitalLogoTrm](https://user-images.githubusercontent.com/109460560/201080268-01f186c0-8d4e-481e-a636-fd9e0e281aa3.png)
 
-Add image for Coffee Capital
+
 
 ## Motivation of application development 
 
