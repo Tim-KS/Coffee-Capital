@@ -63,7 +63,7 @@ const productData = [
   },
   {
     product_name: 'Brioche',
-    price: 5.5
+    price: 7.5
   },
   {
     product_name: 'Tarte',

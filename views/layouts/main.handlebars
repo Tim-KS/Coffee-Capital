@@ -17,8 +17,8 @@
         <span role="img" aria-label="money">☕</span>
         <a href="/">Coffee Capital</a>
       </h1>
-      <input type="email" size="30" name="Email">
-      <button id="sendEmail" type="submit" value="Submit">Send</button>
+      <!-- <input type="email" size="30" name="Email">  -->
+      <!-- <button id="sendEmail" type="submit" value="Submit">Send</button>  -->
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -42,20 +42,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  <script>
-    var sendBtn = document.querySelector("#sendEmail")
-console.log('script was hit')
-
-    function sendEmail() {
-      var password = ""
-      console.log('sent clicked')
-      {{!-- var passwordText = document.querySelector("#password") --}}
-      {{!-- passwordText.value = password; --}}
-    }
-
-    // Add event listener to generate button
-    sendBtn.addEventListener("click", sendEmail);
-  </script>
 </body>
 
 </html>
