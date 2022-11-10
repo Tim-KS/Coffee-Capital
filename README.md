@@ -22,6 +22,10 @@ I WANT additional permissions
 TO HELP run my business -->
 ```md
 
+## System Architecture and Flow
+
+- Add image for concept
+
 ## Links to Deployed Application
 [Link to deployed working application]....
 
