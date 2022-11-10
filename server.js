@@ -1,20 +1,25 @@
+// VIEW EXPRESS HANDLBARS
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
 
+// EMAIL SERVICE
 const EmailService = require('./utils/emailService');
 const emailService = new EmailService();
 emailService.envCheck();
 emailService.email.to = process.env.EMAIL_ACCOUNT;
 emailService.email.subject = "Coffee Capital Email Service Started"
-emailService.email.html = "Coffee Capital Email Service Started";
+emailService.email.html = "Coffee Capital Email Service Started" + process.env.USER;
 emailService.sendEmail(emailService.email.to, emailService.email);
 
+// MODEL DB
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+// CONTROLLERS
+const routes = require('./controllers');
+const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -42,12 +47,22 @@ app.use(session(sess));
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+// views folder is set by default, comment included for developers clarity
+// app.set('views', './views')
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
+
+// SDW10NOV
+app.get('/test1', async (req, res) => {
+  // res.send('you hit server.js')
+  // res.render('homepage')
+  res.render('login')
+})
 
 
 // Fallback route 
@@ -59,7 +74,15 @@ app.get('*', (req, res) =>
 
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Coffee Capital ☕ listening at http://localhost:${PORT}...`));
+  app.listen(PORT, () => console.log(
+    `
+    ☕☕☕☕☕
+
+    Coffee Capital listening at http://localhost:${PORT}...
+
+    ☕☕☕☕☕
+
+    `));
 });
 
 // Xserver copy.js

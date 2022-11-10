@@ -11,13 +11,17 @@ OrderItem.init(
       primaryKey: true,
       autoIncrement: true
     },
-    order_detail_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'order_detail',
+        model: 'user',
         key: 'id'
       }
+    },
+    order_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
     product_id: {
       type: DataTypes.INTEGER,
@@ -26,6 +30,11 @@ OrderItem.init(
         model: 'product',
         key: 'id'
       }
+    },
+    total: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: true,
+      validate: { isDecimal: true }
     }
   },
   {
