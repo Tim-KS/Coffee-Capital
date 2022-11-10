@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const orderData = await Order.findBy({
+    const orderData = await Order.findByPk({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
