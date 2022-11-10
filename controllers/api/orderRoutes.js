@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const sequelize = require('../config/connection');
+const { User, Order } = require('../../models');
+const withAuth = require('../utils/auth');
+
+// POST request for the order
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Order.create({
+    const newOrder = await Order.create({
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -14,16 +18,18 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+// GET order by id
+
+router.get('/:id', async (req, res) => {
   try {
-    const orderData = await Order.destroy({
+    const orderData = await Order.findByPk({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
+    if (!orderData) {
       res.status(404).json({ message: 'No order found with this id!' });
       return;
     }
@@ -35,4 +41,3 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
-
