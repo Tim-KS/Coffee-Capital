@@ -3,55 +3,22 @@ const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/homepage', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const projectData = await Project.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
-
-    // Serialize data so the template can read it
-    // const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // SDW10NOV
-    // console.log('you hit homeRoutes.js>get/')
-    // res.send('you hit homeRoutes.js>get/')
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      // projects, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// SDW10NOV
-router.get('/test2', async (req, res) => {
-  try {
-    console.log('you hit homeRoutes.js/test2')
-    res.send('you hit homeRoutes.js/test2')
-    // res.render('homepage', {logged_in: req.session.logged_in});
+    res.render('homepage', { logged_in: req.session.logged_in });
 
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
-// PROFILE NOT USED 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      // include: [{ model: Project }],
+      include: [{ model: Project }],
     });
 
     const user = userData.get({ plain: true });
@@ -73,6 +40,16 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+
+router.get('/login', async (req, res) => {
+  try {
+    res.render('login');
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 module.exports = router;
