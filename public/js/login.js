@@ -6,9 +6,6 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
-  console.log('client ' + email)
-  console.log('client ' + password)
-
   if (email && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/user/login', {
@@ -19,9 +16,8 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the home page
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
-      alert(response.statusText);
       alert(response.statusText);
     }
   }

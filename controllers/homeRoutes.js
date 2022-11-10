@@ -3,7 +3,7 @@ const { User, Product } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/homepage', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const allProducts = await Product.findAll();
     const products = allProducts.map(product => product.get({ plain: true }));
@@ -38,7 +38,7 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/');
     return;
   }
 
