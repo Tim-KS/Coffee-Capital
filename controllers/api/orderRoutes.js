@@ -3,8 +3,8 @@ const { Project } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    const newProject = await Order.create({
-      ...req.body,
+    const newOrder = await Order.create({
+      product_id: req.params.productId,
       user_id: req.session.user_id,
     });
 
