@@ -1,11 +1,14 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Product } = require('../models');
 const withAuth = require('../utils/auth');
 
 
 router.get('/homepage', async (req, res) => {
   try {
-    res.render('homepage', { logged_in: req.session.logged_in });
+    const allProducts = await Product.findAll();
+    const products = allProducts.map(product => product.get({ plain: true }));
+    res.render('homepage', { logged_in: req.session.logged_in, products });
+
 
   } catch (err) {
     res.status(400).json(err);
