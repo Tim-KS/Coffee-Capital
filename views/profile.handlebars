@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{first_name}}!</h2>
   </div>
 </div>
 
@@ -30,22 +30,22 @@
     </form>
   </div>
 
-  {{#if order.length}}
+  {{!-- {{#if order_items.length}}
   <div class="col-md-6 order-list">
     <h3>Current Order:</h3>
 
-    {{!-- {{#each order as |user or id|}} --}}
+    {{#each order as |user or id|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/order/{{order.id}}">{{order.name}}</a></h4>
       </div>
-      <div class="col-md-4">
+      {{!-- <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{order.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
+      </div> --}}
+    {{!-- </div> --}}
+    {{!-- {{/each}}
   </div>
-  {{/if}}
+  {{/if}} --}} 
 </div>
 
 <script src="./js/profile.js"></script>
