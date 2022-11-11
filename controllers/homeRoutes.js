@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User, Product, OrderItem } = require('../models');
 const withAuth = require('../utils/auth');
 
-
 router.get('/', async (req, res) => {
   try {
     const allProducts = await Product.findAll();
