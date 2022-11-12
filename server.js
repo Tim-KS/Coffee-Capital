@@ -18,7 +18,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // HEROKU
 var env = process.env.NODE_ENV || "development"
-var configH = require(__dirname + './config/config.json')[env];
+var configH = require(__dirname + 'config/config.json')[env];
 if (configH.use_env_variable) {
   var sequelizeHeroku = new Sequelize(process.env[configH.use_env_variable])
 } else {
