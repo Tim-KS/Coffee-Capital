@@ -14,6 +14,22 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+router.get('/product/:id', withAuth, async (req, res) => {
+  try {
+    const productData = await Product.findByPk(req.params.id);
+
+    if (!productData) {
+      res.status(404).json({ message: 'No Product found with this id!' });
+      return;
+    }
+    // res.status(200).json(productData);
+    res.render('product', productData.dataValues);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
