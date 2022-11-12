@@ -37,9 +37,9 @@ class EmailService {
     envCheck(){
       // TEST DOES ENV WORK? is dotenv package installed properly?
       // console.log(process.env);
-      console.log("SEANS CODE: password ====", process.env.DB_PASSWORD);
-      console.log("SEANS CODE: email sender ====", process.env.EMAIL_ACCOUNT);
-      console.log("SEANS CODE: email password ====", process.env.EMAIL_PASSWORD);
+      console.log("password ====", process.env.DB_PASSWORD);
+      console.log("email sender ====", process.env.EMAIL_ACCOUNT);
+      console.log("email password ====", process.env.EMAIL_PASSWORD);
     }
 
     sendEmailOrderComplete(emailReceiver) {

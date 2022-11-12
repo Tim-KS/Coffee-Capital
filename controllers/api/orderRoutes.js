@@ -8,6 +8,8 @@ router.post('/', async (req, res) => {
       user_id: req.session.user_id,
     });
 
+    console.log('SSSSSSSSSSSSSSAAAAAAAAAAAAAATTTTTTTTTTTTTTTUUUUUUUURRRRRRR')
+
     res.status(200).json(newOrder);
   } catch (err) {
     res.status(400).json(err);
