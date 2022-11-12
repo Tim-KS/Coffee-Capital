@@ -7,10 +7,9 @@ const exphbs = require('express-handlebars');
 // EMAIL SERVICE
 const EmailService = require('./utils/emailService');
 const emailService = new EmailService();
-emailService.envCheck();
 emailService.email.to = process.env.EMAIL_ACCOUNT;
 emailService.email.subject = "Coffee Capital Email Service Started"
-emailService.email.html = "Coffee Capital Email Service Started" + process.env.USER;
+emailService.email.html = "Coffee Capital Email Service Started"
 emailService.sendEmail(emailService.email.to, emailService.email);
 
 // MODEL DB
