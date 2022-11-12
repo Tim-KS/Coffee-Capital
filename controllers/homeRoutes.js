@@ -25,6 +25,7 @@ router.get('/product/:id', withAuth, async (req, res) => {
       return;
     }
     // res.status(200).json(productData);
+    console.log(productData);
     res.render('product', productData.dataValues);
   } catch (err) {
     res.status(500).json(err);
@@ -32,7 +33,7 @@ router.get('/product/:id', withAuth, async (req, res) => {
 });
 
 router.get('/add-to-cart/:id', withAuth, async (req, res) => {
-  var cart = new Cart(req.session.cart ? req.session.cart : { items: {} });
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
   console.log("printing the cart");
   console.log(cart);
   try {
@@ -42,7 +43,8 @@ router.get('/add-to-cart/:id', withAuth, async (req, res) => {
       res.status(404).json({ message: 'No Product found with this id!' });
       return;
     }
-    cart.add(product, req.params.id);
+    console.log("Try condition has been met")
+    cart.add(productData.dataValues, productData.dataValues.id);
     req.session.cart = cart;
     console.log(req.session.cart);
     res.redirect('/');
