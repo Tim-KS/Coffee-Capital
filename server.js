@@ -16,15 +16,6 @@ emailService.sendEmail(emailService.email.to, emailService.email);
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// HEROKU
-var env = process.env.NODE_ENV || "development"
-var configH = require(__dirname + 'config/config.json')[env];
-if (configH.use_env_variable) {
-  var sequelizeHeroku = new Sequelize(process.env[configH.use_env_variable])
-} else {
-  var sequelizeHeroku = new Sequelize(configH.database, configH.username, configH.password, configH)
-}
-
 // CONTROLLERS
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
