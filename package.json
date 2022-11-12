@@ -24,6 +24,10 @@
     "mysql2": "^2.2.1",
     "sequelize": "^6.3.5"
   },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  },
   "devDependencies": {
     "nodemon": "^2.0.4",
     "eslint": "^7.12.1",
