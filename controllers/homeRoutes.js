@@ -26,7 +26,7 @@ router.get('/product/:id', withAuth, async (req, res) => {
     }
     // res.status(200).json(productData);
     console.log(productData);
-    res.render('product', productData.dataValues);
+    res.render('product', productData.dataValues, {style: "storefront.css"});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -61,7 +61,7 @@ router.get('/cart', withAuth, async (req, res) => {
       return;
     }
     var cart = new Cart(req.session.cart);
-    res.render('cart', { products: cart.generateArray(), totalPrice: cart.totalPrice });
+    res.render('cart', { products: cart.generateArray(), totalPrice: cart.totalPrice, style: 'storefront.css' });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -81,7 +81,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
+      style: 'storefront.css'
     });
     // res.json(user)
   } catch (err) {
