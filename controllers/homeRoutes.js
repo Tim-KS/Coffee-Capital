@@ -67,6 +67,15 @@ router.get('/cart', withAuth, async (req, res) => {
   }
 });
 
+router.get('/checkout', withAuth, async (req, res) => {
+  if (!req.session.cart) {
+    return res.redirect('/cart');
+  }
+  var cart = new Cart(req.session.cart);
+  res.render('checkout', { totalPrice: cart.totalPrice })
+
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
