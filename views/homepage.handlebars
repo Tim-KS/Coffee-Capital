@@ -77,8 +77,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
+                </li>
+
             </ul>
-            <button class="btn1 btn-outline-success" type="submit" onclick="openNav()">View Order</button>
+            <button class="btn1 btn-outline-success" type="submit" onclick="openNav()">Shopping Cart
+                {{cart.totalQty}}</button>
         </div>
     </div>
 </nav>
@@ -89,13 +92,13 @@
         <div class="row py-4">
             <div class="col-lg-7 pt-5 text-center">
                 <h1 class="pt-4">No queues, just fresh brewed Coffee!</h1>
-                <button id='orderNowBtn' class="btn1 mt-3">Order Now</button>
+                <button id=' orderNowBtn' class="btn1 mt-3">Order Now</button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Eye Catcher (coffee cup logos) -->
+<!-- Eye Catcher (coffee cup logos) extra lines -->
 <section class="new">
     <div class="container py-5">
         <div class="row pt-5">
@@ -131,19 +134,22 @@
                 <div class="col-lg-4">
                     <img src="/images/servingCoffee.jpg" class="img-fluid mb-3" alt="yum">
                     <h5>Fresh Brewed</h5>
-                    <p>No more worrying that you will get cold flat coffee. All our brews are made just before the time
+                    <p>No more worrying that you will get cold flat coffee. All our brews are made just before the
+                        time
                         of pickup. Happy sipping.</p>
                 </div>
                 <div class="col-lg-4">
                     <img src="/images/coffeeTime.jpg" class="img-fluid mb-3" alt="yum">
                     <h5>Right On Time</h5>
-                    <p>No more waiting for ages in queues, just pick the time you want to pick your fresh brewed coffee
+                    <p>No more waiting for ages in queues, just pick the time you want to pick your fresh brewed
+                        coffee
                         up and it will be waiting for you.</p>
                 </div>
                 <div class="col-lg-4">
                     <img src="/images/coffeeFood.jpg" class="img-fluid mb-3" alt="yum">
                     <h5>Fresh Treats</h5>
-                    <p>You wouldn't want to make two stops for your coffee experience. This is why we offer fresh food
+                    <p>You wouldn't want to make two stops for your coffee experience. This is why we offer fresh
+                        food
                         to go along with your fresh coffee.</p>
                 </div>
             </div>
@@ -199,47 +205,7 @@
 </section>
 
 
-<!-- Product modals -->
-<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="orderModalLabel">Coffee</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ante eleifend, sollicitudin turpis
-                non, mollis nibh. Ut id arcu quis nisl convallis sagittis ac lobortis lorem. Aenean turpis velit, rutrum
-                quis massa ac, sodales pharetra elit. Fusce ac metus non quam fermentum auctor. Nam sed pellentesque
-                purus. Duis cursus sagittis felis, vel bibendum justo fringilla quis. Praesent feugiat urna at sem
-                venenatis, sed luctus sapien tincidunt. Sed gravida vitae massa in auctor. Maecenas quis convallis
-                metus. Morbi efficitur tempus accumsan. Etiam efficitur vel nulla ut gravida. Proin dictum imperdiet
-                massa eu tempus. Aenean vulputate libero id viverra laoreet.
-            </div>
-            <div class="modal-footer">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Qty
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">1</a></li>
-                        <li><a class="dropdown-item" href="#">2</a></li>
-                        <li><a class="dropdown-item" href="#">3</a></li>
-                        <li><a class="dropdown-item" href="#">4</a></li>
-                        <li><a class="dropdown-item" href="#">5</a></li>
-                        <li><a class="dropdown-item" href="#">6</a></li>
-                        <li><a class="dropdown-item" href="#">7</a></li>
-                        <li><a class="dropdown-item" href="#">8</a></li>
-                        <li><a class="dropdown-item" href="#">9</a></li>
-                    </ul>
-                </div>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary">Add to Order</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

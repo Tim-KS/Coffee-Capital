@@ -20,6 +20,8 @@ Allow a commuter travelling to work to place an order for their beverage from a 
 AS A Coffee buyer
 I WANT to order coffee online
 AND collect it when it is ready
+
+
 <!-- AS AN Admin (If time)
 I WANT additional permissions 
 TO HELP run my business -->
@@ -38,26 +40,17 @@ TO HELP run my business -->
 ```md
 This part requires to be worked once the application is fully functional
 
-User is presented with a page to sign up to place an online order from Coffee Capital
+The user is presented with the Coffee Capital page
+The user is able to view Coffee Capital cafer menu with price
+When the user clicks on the menu item, a modal appears with the number of items they require
+When the user clicks on Complete order
+The user is presented with a page to sign up to place an online order from Coffee Capital
 User adds Name and Email and creates a password
-User login - Can view the cafe menu with prices
-User presented with a list of option
-User selects drink from the preselect drink options
-User selects size of drink
-User selects sugar,sweeteners, honey  etc
-User selects amount
-User selects type of milk
-User selects amount
-User selects temp - normal, extra hot
-User is asked if they want anything else with the order
-Another drink or food or finalise order
-If drink - drink menu is presented, if food - food menu is selected with option with preselected options
+If the user already has a login - The user is able to login using their login and password
+The user is then directed to cart
 When the user finalises the order or clear order
-The user is asked for a time when they will be picking up the order
-The user selects a time and the order is finished
 An email is sent to the user confirming their order and total cost of the order to pay upon pick up
-Admin logs in to view orders and complete
-Place an order for a beverage
+
 
 ```
 ## Mock-up
