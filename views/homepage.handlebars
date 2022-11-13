@@ -173,8 +173,8 @@
         </div>
         <div class="row">
             {{#each products as |product| }}
-            <a href="/product/{{product.id}}">
-                <div class="col-lg-3 text-center">
+            <a style="text-decoration: none; color: black" class="col-lg-3 text-center" href="/product/{{product.id}}">
+                <div>
                     <button type="button" data-bs-toggle="modal" data-bs-target="#orderModal"
                         class="card border-0 bg-light mb-2">
                         <div class="card-body">
@@ -182,7 +182,7 @@
                         </div>
                     </button>
                     <h6>{{product.name}}</h6>
-                    <p>{{product.price}}</p>
+                    <p>${{product.price}}</p>
                 </div>
             </a>
             {{/each}}
