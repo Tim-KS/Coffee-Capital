@@ -52,6 +52,21 @@ router.get('/add-to-cart/:id', withAuth, async (req, res) => {
   }
 });
 
+// actual cart
+router.get('/cart', withAuth, async (req, res) => {
+  try {
+
+    if (!req.session.cart) {
+      res.status(404).json({ message: 'Cart does not exists' });
+      return;
+    }
+    var cart = new Cart(req.session.cart);
+    res.render('cart', { products: cart.generateArray(), totalPrice: cart.totalPrice });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -81,13 +96,13 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login', {style: "login.css"});
+  res.render('login', { style: "login.css" });
 });
 
 
 router.get('/login', async (req, res) => {
   try {
-    res.render('login', {style: "login.css"});
+    res.render('login', { style: "login.css" });
 
   } catch (err) {
     res.status(400).json(err);
