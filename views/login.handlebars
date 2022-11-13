@@ -1,4 +1,4 @@
-<div class="login">
+<div class="login" id="login">
   <h1 class="text-center">Login</h1>
   <p class="caption mb-4"></p>
     <div class="col-md-6">
@@ -12,34 +12,38 @@
           <input class="form-input" type="password" id="password-login" />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">Sign In</button>
+          <button class="btn1 btn-primary" type="submit">Sign In</button>
+          <p>Don't have an account? <p class="switchBtn" onclick="loginSwitch()">Sign up Here</p>
         </div>
       </form>
     </div>
+</div>
 
-  {{!-- <div class="login">
-    <div class="col-md-6">
-      <h2>Signup</h2>
+  <div class="login hidden" id="signup">
 
+      <h1 class="text-center">Signup</h1>
+      <p class="caption mb-4"></p>
+      <div class="col-md-6">
       <form class="form signup-form">
         <div class="form-group">
-          <label for="name-signup">name:</label>
+          <label for="name-signup">Full Name</label>
           <input class="form-input" type="text" id="name-signup" />
         </div>
         <div class="form-group">
-          <label for="email-signup">email:</label>
+          <label for="email-signup">Email Address</label>
           <input class="form-input" type="text" id="email-signup" />
         </div>
         <div class="form-group">
-          <label for="password-signup">password:</label>
+          <label for="password-signup">Password</label>
           <input class="form-input" type="password" id="password-signup" />
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" type="submit">signup</button>
+          <button class="btn1 btn-primary" type="submit">Sign Up</button>
+          <p>Already have an account? <p class="switchBtn" onclick="signupSwitch()">Login Here</p>
         </div>
       </form>
     </div>
-  </div> --}}
+  </div>
 
   <script src="./js/login.js"></script>
-</div>
+  <script src="./js/loginSwitch.js"></script>

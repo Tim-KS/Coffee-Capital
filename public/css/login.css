@@ -39,3 +39,28 @@ body {
     font-size: 20px;
     margin-top: 15px;
 }
+
+.btn1 {
+    height: 45px;
+    width: 110%;
+    border: none;
+    outline: none;
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
+
+.switchBtn {
+    font-weight: 700;
+}
+
+.switchBtn:hover {
+    cursor: pointer;
+    color: brown;
+}
