@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const allProducts = await Product.findAll();
     const products = allProducts.map(product => product.get({ plain: true }));
-    res.render('homepage', { logged_in: req.session.logged_in, products });
+    res.render('homepage', { logged_in: req.session.logged_in, products, cart: req.session.cart });
 
 
   } catch (err) {
@@ -43,7 +43,6 @@ router.get('/add-to-cart/:id', withAuth, async (req, res) => {
       res.status(404).json({ message: 'No Product found with this id!' });
       return;
     }
-    console.log("Try condition has been met")
     cart.add(productData.dataValues, productData.dataValues.id);
     req.session.cart = cart;
     console.log(req.session.cart);
