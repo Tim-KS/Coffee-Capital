@@ -19,7 +19,7 @@ body {
     height: min-content;
     padding: 20px;
     border-radius: 12px;
-    background: #ffffff;
+    background: white;
 }
 
 .login h1 {
