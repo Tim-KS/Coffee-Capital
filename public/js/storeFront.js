@@ -24,9 +24,9 @@ function openNav() {
     cartOpen = false;
   }
 
-orderNowBtn.addEventListener('click', function() {
-    document.getElementById("menu").scrollIntoView({behavior: 'smooth'});
-})
+// orderNowBtn.addEventListener('click', function() {
+//     document.getElementById("menu").scrollIntoView({behavior: 'smooth'});
+// })
 
 readyBtn.addEventListener('click', function() {
     document.getElementById("menu").scrollIntoView({behavior: 'smooth'});
