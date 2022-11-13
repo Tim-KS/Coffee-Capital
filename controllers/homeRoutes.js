@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const allProducts = await Product.findAll();
     const products = allProducts.map(product => product.get({ plain: true }));
-    res.render('homepage', { logged_in: req.session.logged_in, products, cart: req.session.cart });
+    res.render('homepage', { logged_in: req.session.logged_in, products, cart: req.session.cart, style: "storefront.css" });
 
 
   } catch (err) {
@@ -81,13 +81,13 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', {style: "login.css"});
 });
 
 
 router.get('/login', async (req, res) => {
   try {
-    res.render('login');
+    res.render('login', {style: "login.css"});
 
   } catch (err) {
     res.status(400).json(err);
