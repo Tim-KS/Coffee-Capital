@@ -1,9 +1,10 @@
 <div class="text-center">
     <h2>{{name}}</h2>
     <p>{{description}}</p>
-    <p>{{price}}</p>
+    <p>${{price}}</p>
+    <img src="/images/Products/{{img}}" alt="{{img}}" width="200" height="200">
+    <br>
     <p>
-        {{!-- <button class="btn btn-primary">Order this item</button> --}}
         <a href="/add-to-cart/{{id}}" class="btn btn-primary" role="button">Add to shopping cart</a>
     </p>
 </div>

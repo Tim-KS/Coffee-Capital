@@ -4,23 +4,15 @@
         <ul class="list-group">
             {{#each products as |product| }}
             <li class="list-group-item">
-                <span class="badge badge-light">2</span>
-                <p>Quantity: {{product.qty}}</p>
-                <p>{{product.item.name}}</p>
-                <span class="label label-success">${{product.price}}</span>
-                <div class="btn-group">
-                    <button class="btn btn-primary btn-xs dropdown-toggle" type="Button" data-toggle="dropdown">Action
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu"></ul>
-            <li><a href="#">Reduce by 1</a></li>
-            <li><a href="#">Remove All</a></li>
-
+                <strong>{{product.item.name}} {{product.qty}}</strong>
+                <p></p>
+                <img src="/images/Products/{{product.item.img}}" alt="{{img}}" width="80" height="80">
+                <p>Description: {{product.item.description}}</p>
+                <span class="label label-success">item cost: ${{product.price}}</span>
+            </li>
+            {{/each}}
+        </ul>
     </div>
-
-    </li>
-    {{/each}}
-    </ul>
-</div>
 </div>
 <div class="row">
     <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
