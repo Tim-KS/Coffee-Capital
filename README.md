@@ -25,6 +25,7 @@ SO THAT I can collect it when ready
 
 ## Links to Deployed Application
 [Link to deployed working application]- https://coffee-capital.herokuapp.com/ 
+*Deployed using Heroku and jawsDB*
 
 [Link to Github] - https://github.com/Tim-KS/Coffee-Capital
 
