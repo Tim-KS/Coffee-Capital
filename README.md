@@ -1,44 +1,36 @@
 # The Project - Coffee Capital
+
 ![CoffeeCapitalLogoTrm](https://user-images.githubusercontent.com/109460560/201080268-01f186c0-8d4e-481e-a636-fd9e0e281aa3.png)
 
 
-
-## Motivation of application development 
+## Motivation of Application Development 
 
 Coffee Capital online order application allows the user to place an order ahead at their local coffee shop, so that it is ready for them to collect when they reach. 
 
 A simple application has been created allowing the user to view the available beverages and food items on the menu, which communicates with the database to place an order in real time. 
 
-<!-- Remove the following:
-
-Allow a commuter travelling to work to place an order for their beverage from a coffee shop, so that it is ready at a particular set time for them to collect their order. -->
-
-<!-- Admin - to allow customers to place an order to ahead prior to their arrival - so that the order is ready for they arrive.  -->
 
 ## User Story
+
 ```md
-AS A Coffee buyer
+AS A Customer
 I WANT to order coffee online
-AND collect it when it is ready
+SO THAT I can collect it when ready
 
-
-<!-- AS AN Admin (If time)
-I WANT additional permissions 
-TO HELP run my business -->
 ```
 
 ## System Architecture and Flow
+<img width="809" alt="concept" src="https://user-images.githubusercontent.com/109460560/201594428-daedb201-dc56-4b9d-9862-8fe8b535277b.png">
 
-- Add image for concept
 
 ## Links to Deployed Application
-[Link to deployed working application]....
+[Link to deployed working application]- https://coffee-capital.herokuapp.com/ 
 
-[Link to Github]....
+[Link to Github] - https://github.com/Tim-KS/Coffee-Capital
+
 
 ## Accetance Criteria
 ```md
-This part requires to be worked once the application is fully functional
 
 The user is presented with the Coffee Capital page
 The user is able to view Coffee Capital cafer menu with price
@@ -51,59 +43,96 @@ The user is then directed to cart
 When the user finalises the order or clear order
 An email is sent to the user confirming their order and total cost of the order to pay upon pick up
 
-
 ```
+
 ## Mock-up
 
 The following video shows an example of the functionality of the application:
- - Add link to video
+ - **Demo Video**
 
 
- - Homepage - Login/Signup Screen
+ - **Homepage**
+ 
+ <img width="1920" alt="landing page" src="https://user-images.githubusercontent.com/109460560/201599203-c2e2d71c-97ce-492d-869d-23851265f991.png">
 
- - Landing page - presented with menu
+ - **Login Screen**
+ <img width="1920" alt="login-page" src="https://user-images.githubusercontent.com/109460560/201599210-984ab01f-155b-41a7-97fa-274f0b26aa05.png">
 
- - Order Confirmation
+ 
+ - **Login Signup**
+ <img width="1920" alt="sign-up-page" src="https://user-images.githubusercontent.com/109460560/201599247-c0ad5c4d-8284-4fe5-b6e7-71f31ff1489b.png">
 
- - Email sent to the user - when the order is ready.
+
+ - **User presented with menu**
+ <img width="1920" alt="menu" src="https://user-images.githubusercontent.com/109460560/201599263-ec14484c-8315-4ddf-9994-be3c5498e6c8.png">
+
+ 
+ - **Description provided of the menu item selected**
+ <img width="1132" alt="item-description" src="https://user-images.githubusercontent.com/109460560/201599297-e28db1fd-66d5-4d25-b02d-c7b365c8d2c0.png">
+
+
+ - **Order Cart updated**
+ <img width="579" alt="order summary" src="https://user-images.githubusercontent.com/109460560/201599305-4051d29a-627a-4c52-ac25-73d29e9dcae8.png">
+
+
+ - **Order Summary**
+ <img width="985" alt="order confirmation" src="https://user-images.githubusercontent.com/109460560/201599321-e3ba950d-64c7-4d82-91fd-afa8021a9e9b.png">
+
+  - **Email sent to the user - order is ready to collect**
+<img width="818" alt="order-email-sent-to-user" src="https://user-images.githubusercontent.com/109460560/201600648-cc6e67da-23a1-480a-a797-da2a2fd5e8fe.png">
 
 ## Installation Requirements
 1. Installation of Microsoft Visual Studio
 2. Open up Terminal within Microsoft and type in the following commands:
- - 
- -
+ - npm run seeds
+ - npm i
+ - npm start
 
 ## Future Developments
+ - Use transporters other than email (twilio) for orders
+ - Multiple Coffee Shops
+ - Loyalty points
+ - Gift cards
  - Add an admin user to view ALL orders
- - An electronic payment gateway can be intergrated into applciation, allowing the user to make an online payment ahead; instead of paying cash on collection of their order.
- - The menu to offer more modifications to the driks - such as amount of sugars, type of drink, drink temperature etc. 
- - Allowing the user to save their last order/ favourite drink for subsequent orders when they login into the application
+ - Electronic payment gateway
+ - Refine modifications to orders once added to the cart
+ - Allow users to see last order
+ - Allow users to keep favourites
 
 
 ## Technologies Used
 
 ### Front-end
- - JavaScript
- - jQuery
- - html
- - CSS
- - JS
- - Bootstrap
+ - JavaScript - to allow users to interact with web pages
+ - jQuery - used to minimise the the common tasks of JS
+ - css - used for the style and layout of the page
+ - bootstrap - used to create web page for Coffee Capital
 
 ### Back-end
- - bCrypt
- - dotenv
- - Express
- - Express-handlebars
- - mySQL2
- - eslint
- - Sequelize
+ - bcrypt - *used to hash passwords*
+ - dotenv - *used for environment variables*
+ - express-session - *user sessions*
+ - express-session-sequelize - *user sessions*
+ - express - *for javascript with node*
+ - express-handlebars - *used for views*
+ - mysql2 - *used to connect to a MySQL database for Models, and create an Express.js API for the Controllers*
+ - sequelize - *used to connect to a MySQL database for Models, and create an Express.js API for the Controllers*
+ - nodemailer - *for email notifications*
 
 ## Authors
  - Tim Kandan-Smith: https://github.com/Tim-KS
  - Sean Wallace: https://github.com/SeanU2022
  - Sanket Panchal: https://github.com/DancingSandwich
  - Bhavika Mevada: https://github.com/bmevada
+ 
+## Presentation
+ 
+Link to presentation:
+https://docs.google.com/presentation/d/1zaAPnaO1laEanKa4NJLDgq0o4--l7Ei_rGL40afoBFQ/edit#slide=id.g16bb8dcf656_0_41
+
+# Happy ordering - Best wishes Coffee Capital
+
+<img width="882" alt="happy-coffee" src="https://user-images.githubusercontent.com/109460560/201603652-24b03766-86df-4363-b8cb-ce1b4498e8b0.png">
 
 
 
