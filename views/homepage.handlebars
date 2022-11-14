@@ -13,8 +13,8 @@
                 </li>
                 {{#if logged_in}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Account
                     </a>
 
@@ -27,18 +27,18 @@
                     </ul>
                 </li>
                 {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./login">Login</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./login">Login</a>
+                </li>
                 {{/if}}
                 {{#if logged_in}}
                 <li class="nav-item">
                     <a class="nav-link">Welcome back!</a>
-                    </li>
+                </li>
                 {{else}}
                 <li class="nav-item">
                     <a class="nav-link">Make a free account!</a>
-                    </li>
+                </li>
                 {{/if}}
             </ul>
             <a href="/cart/" class="btn btn-primary" role="button">Shopping Cart{{cart.totalQty}}</a>
@@ -56,7 +56,7 @@
 <!-- Top Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <img id="coffeeCapitalLogo"  href="/" src="/images/CoffeeCapitalLogoTrm.png">
+        <img id="coffeeCapitalLogo" href="/" src="/images/CoffeeCapitalLogoTrm.png">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,8 +68,8 @@
                 </li>
                 {{#if logged_in}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         Account
                     </a>
 
@@ -81,22 +81,22 @@
                         <li><a class="dropdown-item" id="logout">Logout</a></li>
                     </ul>
                 </li>
-                    {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./login">Login</a>
-                    </li>
-                    {{/if}}
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link active" href="./login">Login</a>
+                </li>
+                {{/if}}
 
 
-                    {{#if logged_in}}
-                    <li class="nav-item">
-                        <a class="nav-link">Welcome back!</a>
-                    </li>
-                    {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Make an account for free!</a>
-                    </li>
-                    {{/if}}
+                {{#if logged_in}}
+                <li class="nav-item">
+                    <a class="nav-link">Welcome back!</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Make an account for free!</a>
+                </li>
+                {{/if}}
             </ul>
             <a href="/cart/" class="btn btn-primary" role="button">Shopping Cart{{cart.totalQty}}</a>
         </div>
@@ -109,7 +109,9 @@
         <div class="row py-4">
             <div class="col-lg-7 pt-5 text-center">
                 <h1 class="pt-4">No queues, just fresh brewed Coffee!</h1>
-                <button id=' orderNowBtn' class="btn1 mt-3">Order Now</button>
+                <a href="#themenu"><button id='orderNowBtn' class="btn1 mt-3">Order Now</button></a>
+
+
             </div>
         </div>
     </div>
@@ -181,7 +183,7 @@
 
 <!-- Menu -->
 <section id="menu" class="shop">
-    <div class="container">
+    <div class="container" id="themenu">
         <div class="row py-5">
             <div class="col-lg-8 m-auto text-center">
                 <h1>Our Menu</h1>
