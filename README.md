@@ -96,7 +96,7 @@ The following video shows an example of the functionality of the application:
 
 
  - **Order Confirmation**
- - 
+ 
  <img width="985" alt="order confirmation" src="https://user-images.githubusercontent.com/109460560/201599321-e3ba950d-64c7-4d82-91fd-afa8021a9e9b.png">
 
  - **Email sent to the user - order is ready to collect**
