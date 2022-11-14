@@ -130,10 +130,10 @@ https://drive.google.com/file/d/1RBGJp_TETCOwP1YXN2zb5V-Al577oXoB/view?usp=shari
 ## Technologies Used
 
 ### Front-end
- - JavaScript - to allow users to interact with web pages
- - jQuery - used to minimise the the common tasks of JS
- - css - used for the style and layout of the page
- - bootstrap - used to create web page for Coffee Capital
+ - JavaScript - *to allow users to interact with web pages*
+ - jQuery - *used to minimise the the common tasks of JS*
+ - css - *used for the style and layout of the page*
+ - bootstrap - *used to create web page for Coffee Capital*
 
 ### Back-end
  - bcrypt - *used to hash passwords*
