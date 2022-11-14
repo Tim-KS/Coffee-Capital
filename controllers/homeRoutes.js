@@ -125,14 +125,6 @@ router.get('/login', (req, res) => {
 });
 
 
-// router.get('/login', async (req, res) => {
-//   try {
-//     res.render('login', { style: "login.css" });
-
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
