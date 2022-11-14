@@ -9,6 +9,8 @@ Coffee Capital online order application allows the user to place an order ahead 
 
 A simple application has been created allowing the user to view the available beverages and food items on the menu, which communicates with the database to place an order in real time. 
 
+This app runs in the browser and features dynamically updated using various technologies as identified below. It is a clean and polished, responsive user interface that adapts to multiple screen sizes and responds to user interface.
+
 
 ## User Story
 
