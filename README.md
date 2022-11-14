@@ -69,9 +69,8 @@ The following video shows an example of the functionality of the application:
 
 ## Installation Requirements
 1. Installation of Microsoft Visual Studio
-2. Open up Terminal within Microsoft and type in the following commands:
- - 
- -
+2. Open up a Git Bash terminal
+3. Clone the GitHub repository to your preferred location with `git clone https://github.com/Tim-KS/Music-Search-Webpage.git`
 
 ## Future Developments
  - Add an admin user to view ALL orders
