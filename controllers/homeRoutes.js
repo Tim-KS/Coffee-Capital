@@ -68,11 +68,21 @@ router.get('/cart', withAuth, async (req, res) => {
 });
 
 router.get('/checkout', withAuth, async (req, res) => {
+
   if (!req.session.cart) {
     return res.redirect('/cart');
   }
+  // EMAIL SERVICE
+  const EmailService = require('../utils/emailService');
+  const emailService = new EmailService();
+  emailService.email.to = 'sean.wallace.australia@gmail.com';
+  emailService.sendEmailOrderComplete(emailService.email.to);
   var cart = new Cart(req.session.cart);
   res.render('checkout', { totalPrice: cart.totalPrice })
+
+});
+router.get('/checkout', async (req, res) => {
+
 
 });
 
