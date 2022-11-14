@@ -52,7 +52,7 @@ THEN the customer clicks on the cart to view the cart items
 THEN the customer is displayed with the cart items in their order
 WHEN the customer clicks on "Checkout", the order is placed 
 THEN the customer is informed that the order is confirmed with payment amount and
-THEN the customer recieves an email informing them that their order is ready to pick u
+THEN the customer recieves an email informing them that their order is ready to pick up
 
 ```
 
