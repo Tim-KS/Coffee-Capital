@@ -32,9 +32,9 @@ TO HELP run my business -->
 - Add image for concept
 
 ## Links to Deployed Application
-[Link to deployed working application]....
+Heroku Deployment: https://coffee-capital.herokuapp.com/
 
-[Link to Github]....
+GitHub Link: https://github.com/Tim-KS/Coffee-Capital
 
 ## Accetance Criteria
 ```md
