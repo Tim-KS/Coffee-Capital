@@ -31,17 +31,28 @@ SO THAT I can collect it when ready
 
 ## Accetance Criteria
 ```md
-
-The user is presented with the Coffee Capital page
-The user is able to view Coffee Capital cafer menu with price
-When the user clicks on the menu item, a modal appears with the number of items they require
-When the user clicks on Complete order
-The user is presented with a page to sign up to place an online order from Coffee Capital
-User adds Name and Email and creates a password
-If the user already has a login - The user is able to login using their login and password
-The user is then directed to cart
-When the user finalises the order or clear order
-An email is sent to the user confirming their order and total cost of the order to pay upon pick up
+GIVEN a customer is presented with the Coffee Capital homepage
+The customer is able to able to view the the information about Coffee Capital cafe
+THEN customer is also able to view the Coffee Capital cafe menu items with price before signing in
+If the customer does not have a sign in ID
+WHEN the customer clicks on "Sign up" 
+THEN the customer is redirected to the sign up page
+THEN the customer is able to sign up using their name, email and password
+If the customer already has an accocunt with Coffee Capital
+WHEN the customer clicks on "Login" 
+THEN the customer is redirected to the login page
+THEN the customer logs in using email address and password
+WHEN the customer clicks on the menu item
+THEN the menu item appears with a description of the cafe item
+WHEN the customer clicks on add to cart, the item is added to the cart
+THEN the customer the redirected to the homepage to view addtional menu items
+THEN the customer is able to add more items to the cart
+WHEN the customer has completed their order
+THEN the customer clicks on the cart to view the cart items
+THEN the customer is displayed with the cart items in their order
+WHEN the customer clicks on "Checkout, the order is placed 
+THEN the customer is informed that the order is confirmed with payment amount and
+THEN the customer recieves an email informing them that their order is ready to pick u
 
 ```
 
@@ -56,32 +67,44 @@ The following video shows an example of the functionality of the application:
  <img width="1920" alt="landing page" src="https://user-images.githubusercontent.com/109460560/201599203-c2e2d71c-97ce-492d-869d-23851265f991.png">
 
  - **Login Screen**
+ - 
  <img width="1920" alt="login-page" src="https://user-images.githubusercontent.com/109460560/201599210-984ab01f-155b-41a7-97fa-274f0b26aa05.png">
 
  
  - **Login Signup**
+ 
  <img width="1920" alt="sign-up-page" src="https://user-images.githubusercontent.com/109460560/201599247-c0ad5c4d-8284-4fe5-b6e7-71f31ff1489b.png">
 
 
  - **User presented with menu**
+ 
  <img width="1920" alt="menu" src="https://user-images.githubusercontent.com/109460560/201599263-ec14484c-8315-4ddf-9994-be3c5498e6c8.png">
 
  
  - **Description provided of the menu item selected**
+ 
  <img width="1132" alt="item-description" src="https://user-images.githubusercontent.com/109460560/201599297-e28db1fd-66d5-4d25-b02d-c7b365c8d2c0.png">
 
 
  - **Order Cart updated**
- <img width="579" alt="order summary" src="https://user-images.githubusercontent.com/109460560/201599305-4051d29a-627a-4c52-ac25-73d29e9dcae8.png">
+ 
+<img width="1920" alt="updated-cart-items" src="https://user-images.githubusercontent.com/109460560/201605871-a33bb032-7a32-4ec0-9961-513d0e809942.png">
 
 
  - **Order Summary**
+ <img width="579" alt="order summary" src="https://user-images.githubusercontent.com/109460560/201599305-4051d29a-627a-4c52-ac25-73d29e9dcae8.png">
+
+
+ - **Order Confirmation**
+ - 
  <img width="985" alt="order confirmation" src="https://user-images.githubusercontent.com/109460560/201599321-e3ba950d-64c7-4d82-91fd-afa8021a9e9b.png">
 
-  - **Email sent to the user - order is ready to collect**
+ - **Email sent to the user - order is ready to collect**
+  
 <img width="818" alt="order-email-sent-to-user" src="https://user-images.githubusercontent.com/109460560/201600648-cc6e67da-23a1-480a-a797-da2a2fd5e8fe.png">
 
 ## Installation Requirements
+
 1. Installation of Microsoft Visual Studio
 2. Open up Terminal within Microsoft and type in the following commands:
  - npm run seeds
