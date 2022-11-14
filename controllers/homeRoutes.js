@@ -67,6 +67,31 @@ router.get('/cart', withAuth, async (req, res) => {
   }
 });
 
+router.get('/checkout', withAuth, async (req, res) => {
+
+  if (!req.session.cart) {
+    return res.redirect('/cart');
+  }
+
+
+  // EMAIL SERVICE
+  const EmailService = require('../utils/emailService');
+  const emailService = new EmailService();
+  emailService.email.to = 'sean.wallace.australia@gmail.com';
+  // emailService.email.subject = "Coffee order has been placed"
+  // emailService.email.html = "Thank you for your order"
+  emailService.sendEmailOrderComplete(emailService.email.to);
+
+  var cart = new Cart(req.session.cart);
+  res.render('checkout', { totalPrice: cart.totalPrice });
+
+
+});
+router.get('/checkout', async (req, res) => {
+
+
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -100,12 +125,14 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/login', async (req, res) => {
-  try {
-    res.render('login', { style: "login.css" });
 
-  } catch (err) {
-    res.status(400).json(err);
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
   }
 });
 
