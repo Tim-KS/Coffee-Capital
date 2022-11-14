@@ -68,7 +68,7 @@ The following video shows an example of the functionality of the application:
  <img width="1920" alt="landing page" src="https://user-images.githubusercontent.com/109460560/201599203-c2e2d71c-97ce-492d-869d-23851265f991.png">
 
  - **Login Screen**
- - 
+ 
  <img width="1920" alt="login-page" src="https://user-images.githubusercontent.com/109460560/201599210-984ab01f-155b-41a7-97fa-274f0b26aa05.png">
 
  
