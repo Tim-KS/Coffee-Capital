@@ -109,7 +109,7 @@ The following video shows an example of the functionality of the application:
 ## Installation Requirements
 
 1. Installation of Microsoft Visual Studio
-2. Open up Terminal within Microsoft and type in the following commands:
+2. Open up Terminal within Microsoft Visual Studio and type in the following commands:
  - npm run seeds
  - npm i
  - npm start
